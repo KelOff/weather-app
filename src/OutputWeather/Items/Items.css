@@ -7,6 +7,16 @@
   display: flex;
   flex-direction: column;
   align-self: center;
+  background-color: #fff700;
+}
+.Item.freezing {
+  background-color: #00ffff;
+}
+.Item.hot {
+  background-color: #ff8c00;
+}
+.Item.warm {
+  background-color: #fff700;
 }
 .Item img {
   position: absolute;
@@ -17,6 +27,8 @@
   width: 50px;
 }
 .Item__list {
+  /* background: #fff700; */
+
   list-style-type: none;
 }
 .Item__list p {

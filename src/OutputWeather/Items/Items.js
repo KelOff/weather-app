@@ -1,36 +1,45 @@
-import React from 'react'
-import './Items.css'
+import React from "react";
+import "./Items.css";
 
 const Item = (props) => {
-  let title = props.title
-  let country = props.country
-  let weatherName = props.weatherName.toLowerCase()
-  let tempMin = Number(props.tempMin).toFixed(1)
-  let temperature = Number(props.temperature).toFixed(1)
-  let tempMax = Number(props.tempMax).toFixed(1)
-  let wind = Number(props.wind).toFixed(2)
-  let humidity = props.humidity
-  let air_pressure = props.air_pressure.toFixed(0)
-  let coordinats = props.coordinats
-  let weather_state_abbr = props.weather_state_abbr
+  let title = props.title;
+  let country = props.country;
+  let weatherName = props.weatherName.toLowerCase();
+  let tempMin = Number(props.tempMin).toFixed(1);
+  let temperature = Number(props.temperature).toFixed(1);
+  let tempMax = Number(props.tempMax).toFixed(1);
+  let wind = Number(props.wind).toFixed(2);
+  let humidity = props.humidity;
+  let air_pressure = props.air_pressure.toFixed(0);
+  let coordinats = props.coordinats;
+  let weather_state_abbr = props.weather_state_abbr;
 
-  let url = `https://www.metaweather.com/static/img/weather/${weather_state_abbr}.svg`
+  let url = `https://www.metaweather.com/static/img/weather/${weather_state_abbr}.svg`;
+  let cls = ["Item"];
+  if (temperature <= -10) {
+    cls.push("freezing");
+  } else if (temperature <= 30) {
+    cls.push("warm");
+  } else {
+    cls.push("hot");
+  }
+  console.log(cls);
   return (
-    <div className="Item">
+    <div className={cls.join(" ")}>
       <img src={url} alt="" />
       <li className="Item__list">
         <p>
           <b>
             <span className="Item__yellow">
               {title}, {country}
-            </span>{' '}
+            </span>{" "}
             <i>{weatherName}</i>
           </b>
         </p>
         <p>
           <span className="Item__temperature">
             {temperature} <sup className="index">o</sup>C
-          </span>{' '}
+          </span>{" "}
           temperature from {tempMin} to {tempMax} <sup className="index">o</sup>
           C, wind {wind} m/s. humidity {humidity}%, {air_pressure} hpa
         </p>
@@ -39,7 +48,7 @@ const Item = (props) => {
         </p>
       </li>
     </div>
-  )
-}
+  );
+};
 
-export default Item
+export default Item;
