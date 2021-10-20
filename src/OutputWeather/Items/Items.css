@@ -1,0 +1,37 @@
+.Item {
+  position: relative;
+  max-width: 860px;
+  border-top: 1px solid #eee;
+  padding-left: 150px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+.Item img {
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  left: 40px;
+  height: 50px;
+  width: 50px;
+}
+.Item__list {
+  list-style-type: none;
+}
+.Item__list p {
+  margin-top: 10px;
+}
+.Item__yellow {
+  color: #e96e50;
+  cursor: pointer;
+}
+.index {
+  font-size: 70%;
+}
+.Item__temperature {
+  background-color: #4e4d4a;
+  border-radius: 10px;
+  padding: 0 7px;
+  color: #fff;
+}

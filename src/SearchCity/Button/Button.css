@@ -1,0 +1,19 @@
+.button {
+  border-radius: 0 45px 45px 0;
+  height: 49px;
+  width: 150px;
+  margin: 0;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: 1px solid transparent;
+  background-color: #e96e50;
+  border-color: #c1593f;
+  cursor: pointer;
+  color: #eee;
+}
+
+.button:hover,
+.button:active {
+  background-color: hsl(12, 61%, 43%);
+  border-color: #a74e37;
+}
