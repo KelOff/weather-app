@@ -1,10 +1,9 @@
 import React from 'react';
 import Item from '../Items/Items';
 
-const WeatherInMyCity = (props) => {
-  return (
-    <ul>
-      <Item
+const WeatherInMyCity = (props) => (
+  <ul>
+    <Item
         title={ props.data.title }
         country={ props.data.parent.title }
         weatherName={ props.data.consolidated_weather[ 0 ].weather_state_name }
@@ -19,8 +18,7 @@ const WeatherInMyCity = (props) => {
           props.data.consolidated_weather[ 0 ].weather_state_abbr
         }
       />
-    </ul>
+  </ul>
   );
-};
 
 export default WeatherInMyCity;

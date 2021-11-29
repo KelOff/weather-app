@@ -64,27 +64,28 @@ class App extends Component {
             })
         })
       })
-  }
+    }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">Some Header</header>
+        <header className="App-header">Weather App</header>
 
         <SearchCity
           handleKeyPress={ this.handleKeyPress }
           onClick={ this.searchCityHandler }
           state={ this.state }
         />
-        <React.Fragment>
+        <>
           {this.state.weatherByName.length === 0 &&
           this.state.myLocationWeather.title ? (
             <WeatherInMyCity data={ this.state.myLocationWeather } />
-          ) : null}
-          {this.state.weatherByName.length !== 0 ? (
+          ) : null }
+          {this.state.weatherByName.length  ? (
             <SearchedWeather data={ this.state.weatherByName } />
-          ) : null}
-        </React.Fragment>
+          ) : null }
+        </>
+       
       </div>
     )
   }

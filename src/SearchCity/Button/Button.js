@@ -1,15 +1,13 @@
 import React from 'react';
 import './Button.css';
 
-const Buuton = (props) => {
-  return (
-    <button
+const Buuton = (props) => (
+  <button
       className="button"
       onClick={ () => props.onClick(props.input.current.value) }
     >
-      SEARCH
-    </button>
-  );
-};
+    SEARCH
+  </button>
+)
 
 export default Buuton;

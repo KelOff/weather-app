@@ -23,7 +23,6 @@ const Item = (props) => {
   } else {
     cls.push('hot');
   }
-  console.log(cls);
   return (
     <div className={ cls.join(' ') }>
       <img src={ url } alt="" />
