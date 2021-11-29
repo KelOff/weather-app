@@ -1,5 +1,3 @@
-'use strict';
-
 // Do this as the first thing so that any code reading it knows the right env.
 process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
@@ -13,7 +11,6 @@ process.on('unhandledRejection', err => {
 
 // Ensure environment variables are read.
 require('../config/env');
-
 
 const path = require('path');
 const chalk = require('react-dev-utils/chalk');
@@ -40,7 +37,7 @@ const WARN_AFTER_CHUNK_GZIP_SIZE = 1024 * 1024;
 const isInteractive = process.stdout.isTTY;
 
 // Warn and crash if required files are missing
-if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
+if (!checkRequiredFiles([ paths.appHtml, paths.appIndexJs ])) {
   process.exit(1);
 }
 
@@ -151,11 +148,11 @@ function build(previousFileSizes) {
         if (Object.prototype.hasOwnProperty.call(err, 'postcssNode')) {
           errMessage +=
             '\nCompileError: Begins at CSS selector ' +
-            err['postcssNode'].selector;
+            err[ 'postcssNode' ].selector;
         }
 
         messages = formatWebpackMessages({
-          errors: [errMessage],
+          errors: [ errMessage ],
           warnings: [],
         });
       } else {

@@ -1,9 +1,9 @@
-import React from "react";
-import Buuton from "./Button/Button.js";
-import "./SearchCity.css";
+import React from 'react';
+import Buuton from './Button/Button.js';
+import './SearchCity.css';
 
 const SearchCity = (props) => {
-  let inputValue = React.createRef();
+  const inputValue = React.createRef();
   return (
     <div>
       <div>
@@ -15,10 +15,10 @@ const SearchCity = (props) => {
         <input
           type="text"
           placeholder="Type the city"
-          ref={inputValue}
-          onKeyPress={props.handleKeyPress}
+          ref={ inputValue }
+          onKeyPress={ props.handleKeyPress }
         />
-        <Buuton onClick={props.onClick} input={inputValue}>
+        <Buuton onClick={ props.onClick } input={ inputValue }>
           Search
         </Buuton>
       </div>

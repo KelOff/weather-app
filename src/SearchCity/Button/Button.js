@@ -1,11 +1,11 @@
-import React from "react";
-import "./Button.css";
+import React from 'react';
+import './Button.css';
 
 const Buuton = (props) => {
   return (
     <button
       className="button"
-      onClick={() => props.onClick(props.input.current.value)}
+      onClick={ () => props.onClick(props.input.current.value) }
     >
       SEARCH
     </button>
